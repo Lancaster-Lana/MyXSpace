@@ -1,0 +1,17 @@
+<div class="container-default">
+
+  <brand-header [brandName]="brandName"></brand-header>
+
+  <header class="pageHeader">
+    <h3 class="text-center">
+      Welcome {{brandName}} HOME
+      <!--{{'pageHeader.Dashboard' | translate}}-->
+    </h3>
+  </header>
+
+  <div [@fadeInOut]>
+    <!--TODO: Content, statictics-->
+    <statistics-demo></statistics-demo>
+  </div>
+
+</div>

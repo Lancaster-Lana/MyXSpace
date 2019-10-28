@@ -1,0 +1,62 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="MyXSpace.Core.Entities.AppRole" BaseTypeListCollapsed="true">
+    <Position X="5" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAIAEAAEAAAgAAAAAAAAAAAAgAAAAAAAAAAEAAAAAAE=</HashCode>
+      <FileName>Entities\Identity\AppRole.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="MyXSpace.Core.Entities.AppUser" BaseTypeListCollapsed="true">
+    <Position X="2.5" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQAEAAAAAAAAAQAAAAAAAAAgAAAAAgAAAAEAAAAAAE=</HashCode>
+      <FileName>Entities\Identity\AppUser.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="MyXSpace.Core.Entities.Tenant">
+    <Position X="0.5" Y="2" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAEAAAAAADAAAAAAAAAAAAAAAAAAAhAAAAAAAAAAAAA=</HashCode>
+      <FileName>Entities\Identity\Tenant.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="MyXSpace.Core.Entities.UserProfile">
+    <Position X="2.25" Y="4.5" Width="2.25" />
+    <TypeIdentifier>
+      <HashCode>ACABAEAAACAAAAAAEAAAAAwgAAAAAAAAEAAAAAAACAg=</HashCode>
+      <FileName>Entities\Identity\UserProfile.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="MyXSpace.Core.Entities.UserRole_Permission">
+    <Position X="7.5" Y="4.25" Width="2.25" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAIAAAAgAIAAAAAABAQAAAAAAAAAAAAAABAAAAA=</HashCode>
+      <FileName>Entities\Identity\UserRole_Permission.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="MyXSpace.Core.Entities.UserRole_PermissionGroup">
+    <Position X="5" Y="4.5" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAgAAAAAAAAAAQAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Entities\Identity\UserRole_PermissionGroup.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="MyXSpace.Core.Entities.SuperAdmin">
+    <Position X="0.5" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAABAAAAAAAAAIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Entities\Identity\SuperAdmin.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="MyXSpace.Core.Entities.Customer">
+    <Position X="0.5" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAABAAAAAQAAAQAAgBCAAAAAAAEAAA=</HashCode>
+      <FileName>Entities\Identity\Customer.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>

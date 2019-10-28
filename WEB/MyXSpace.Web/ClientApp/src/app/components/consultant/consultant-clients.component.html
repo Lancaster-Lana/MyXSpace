@@ -1,0 +1,62 @@
+<!-- top MenuBar -->
+<nav class="navbar navbar-static-top" role="menu">
+  <div class="container-fluid">
+    <div class="float-left">
+      <h5><b> My Clients </b></h5>
+    </div>
+    <div class="float-right">
+      <button (click)="sendInvitations()" class="btn btn-outline-success">
+        <i class="fa fa-plus"></i><span> Invite Client</span>
+      </button>
+    </div>
+  </div>
+</nav>
+
+<!--LIST consultant's clients -->
+<kendo-grid  #clientsGrid [kendoGridBinding]="clients | async"
+            height="500"
+            [pageSize]="10"
+            [pageable]="true"
+            [sortable]="true"
+            [filterable]="true"
+            [groupable]="true"
+            [selectable]="{enabled: true, mode: 'multiple'}"
+            [kendoGridSelectBy]="'clientCode'"
+            [selectedKeys]="selectedClientCODEs">
+  <ng-template kendoGridToolbarTemplate>
+    <button class="btn btn-sm btn-success" icon="file-excel" kendogridexcelcommand=""> Export to Excel</button>
+  </ng-template>
+  <kendo-pager-prev-buttons></kendo-pager-prev-buttons>
+  <kendo-pager-info></kendo-pager-info>
+  <kendo-pager-next-buttons></kendo-pager-next-buttons>
+  <kendo-pager-page-sizes [pageSizes]="[5, 10, 40]"></kendo-pager-page-sizes>
+
+  <!--COLUMNS -->
+  <kendo-grid-checkbox-column showSelectAll="true"  width="40"></kendo-grid-checkbox-column>
+
+  <kendo-grid-column field="id" title="ID" width="200"></kendo-grid-column>
+  <!--<kendo-grid-column field="ClientName">
+    <ng-template kendoGridCellTemplate let-dataItem>
+      <div class="customer-photo"
+           [ngStyle]="{ backgroundImage: getUrl(dataItem.id) }"></div>
+      <div class="client-name">
+        {{ dataItem.ClientName }}
+      </div>
+    </ng-template>
+  </kendo-grid-column>-->
+  <kendo-grid-column field="clientName" title="Client Name"></kendo-grid-column>
+  <kendo-grid-column field="clientCode" title="Client Code"></kendo-grid-column>
+  <kendo-grid-column field="invited" title="Invited"></kendo-grid-column>
+  <kendo-grid-column field="status" title="Status"></kendo-grid-column>
+  <kendo-grid-column field="email" title="Email"></kendo-grid-column>
+  <kendo-grid-column field="phoneNumber" title="Phone"></kendo-grid-column>
+
+  <!--ACTIONS-->
+  <kendo-grid-command-column width="40">
+    <ng-template kendoGridCellTemplate let-dataItem>
+      <button class="btn-sm btn-outline-success" title="Invite" (click)="sendInvitationToClient(dataItem)">
+        <i class="fa fa-plus"></i>
+      </button>
+    </ng-template>
+  </kendo-grid-command-column>
+</kendo-grid>

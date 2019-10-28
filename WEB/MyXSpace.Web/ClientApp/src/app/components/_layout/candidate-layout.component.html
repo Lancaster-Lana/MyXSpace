@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="">
+  <meta name="author" content="">
+  <title>Candidate</title>
+</head>
+<body>
+  <!-- Header with brand Logo and Login\Logout -->
+  <brand-header *ngIf="brandName" [brandName]="brandName"></brand-header>
+
+  <div id="page-wrapper" class="row">
+    <!--Left menu -->
+    <aside class="col-3 fixed-left shadow bg-light">
+      <ul class="navbar-nav flex-grow">
+        <li>
+          <figure>
+            <legend *ngIf="user && user.fullName">{{user.fullName}}</legend>
+            <div class="img-circle">
+              <img *ngIf="photo" class="rounded-circle" [src]="photo" alt="user photo" />
+            </div>
+            <!--<footer>{{user.status}} </footer>-->
+          </figure>
+        </li>
+        <li class="candidate-menu">
+          <a [routerLink]="['/candidate/joboffers/']" class="btn btn-outline-info btn-block waves-effect waves-light waves-round"> Job Offers </a>
+          <a [routerLink]="['/candidate/documents/']" class="btn btn-outline-info btn-block"> Documents </a>
+          <a [routerLink]="['/candidate/contracts/']" class="btn btn-outline-info btn-block"> Contracts </a>
+          <a [routerLink]="['/candidate/financial/']" class="btn btn-outline-info btn-block "> Financial </a>
+          <a [routerLink]="['/candidate/myinfos/']" class="btn btn-outline-info btn-block "> My Infos </a>
+          <a [routerLink]="['/candidate/leavetestimonial/']" class="btn btn-outline-info btn-block "> Leave a Testimonial </a>
+        </li>
+      </ul>
+    </aside>
+    <div class="col-9">
+      <!-- PAGE BODY -->
+      <router-outlet></router-outlet>
+    </div>
+  </div>
+</body>
+</html>
+
+<!--<aside class="col-3 shadow">
+  <nav class='nav nav-pills nav-stacked border-bottom '>
+    <div class="bg-primary">
+
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target=".navbar-collapse" aria-label="Toggle navigation"
+              [attr.aria-expanded]="isExpanded" (click)="toggle()">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <ul class="navbar-nav flex-grow">
+        <li class="table-shadow">
+          <figure>
+            <legend> Profile Info:</legend>
+            <div class="circle-img img-circle">
+
+              <img src="{{userProfile.Image}}" />
+            </div>
+          </figure>
+        </li>
+        <li class="nav-item">
+          <a [routerLink]="['/Candidate/JobOffers']" class="nav-link text-dark ">
+            Job Offers
+            <span class="badge">2</span>
+          </a>
+        </li>
+        <li class="nav-item">
+          <a [routerLink]="['/Candidate/Contracts']" class="nav-link text-dark ">
+            Contracts
+            <span class="badge">9</span>
+          </a>
+        </li>
+        <li class="nav-item">
+          <a [routerLink]="['/Candidate/Invoices']" class="nav-link text-dark ">
+            Invoices
+          </a>
+        </li>
+        <li class="nav-item">
+          <a [routerLink]="['/Candidate/Documents']" class="nav-link text-dark ">
+            Documents
+          </a>
+        </li>
+      </ul>
+
+    </div>
+  </nav>
+</aside>-->

@@ -1,0 +1,51 @@
+<!--this is brand-header (with avatar and Login|logot) -->
+<nav class="navbar navbar-fixed-top shadow">
+
+  <div class="container-fluid ">
+    <div class="app-component navbar-brand">
+      <img *ngIf="appBrandLogo" [src]="appBrandLogo" alt="logo" />
+      <span routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }">
+        <a routerLink="/home" class="fa fa-home"></a>
+      </span>
+    </div>
+
+    <div class="text-center app-component appTitle"> This is the <b> {{appBrandTitle}} </b> news </div>
+
+    <div class="app-component float-right">
+      <ul class="nav navbar-right navbar-toolbar-right">
+
+        <!--Language select-->
+        <li class="nav-item" title="{{'preferences.LanguageHint' | translate}}">
+          <select id="language" #languageSelect class="form-control" [(ngModel)]="configurations.language" [ngValue]="en">
+            <option value="en" [ngClass]="'flag-icon flag-icon-in flag-icon-us'" data-subtext="(Default)">{{'preferences.English' | translate}}</option>
+            <option value="fr" [ngClass]="'flag-icon flag-icon-fr'">{{'preferences.French' | translate}}</option>
+            <option value="de" [ngClass]="'flag-icon flag-icon-squared flag-icon-gb'">{{'preferences.German' | translate}}</option>           
+          </select>
+          <span></span>
+        </li>
+
+        <!-- Login user panel-->
+        <li *ngIf="isUserLoggedIn" class="nav-item">
+          <!-- settings -->
+          <a class="btn-lg btn-outline-info" routerLink="/settings" title="{{'mainMenu.Settings' | translate}}"><i class="fa fa-cog"></i><span></span> </a>
+          <a class="btn-lg btn-outline-warning" routerLink="/support" title="{{'mainMenu.Support' | translate}}"><i class="fa fa-comments-o"></i><span></span></a>
+
+          <a class="m-2" [popover]="popTemplate" (onHidden)="markNotificationsAsRead()" [popoverTitle]="notificationsTitle">
+            <i class="fa fa-user-o"></i><span> {{userName}}</span>
+            <!--<span *ngIf="newNotificationCount > 0" class="badge">{{newNotificationCount}}</span>-->
+          </a>
+
+          <button class="offset-col-2 btn btn-outline-info" (click)="logout()">
+            <span class="glyphicon glyphicon-log-out"> {{'mainMenu.Logout' | translate}}</span>
+          </button>
+        </li>
+
+        <li *ngIf="!isUserLoggedIn" class="offset-col-2 nav-item">
+          <a class="btn btn-outline-info" routerLink="/login">
+            <span class="glyphicon glyphicon-log-in"> {{'mainMenu.Login' | translate}}</span>
+          </a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>

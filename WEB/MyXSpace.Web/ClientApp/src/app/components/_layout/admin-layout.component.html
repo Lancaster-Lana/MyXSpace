@@ -1,0 +1,23 @@
+<!-- Header with brand Logo and Login\Logout -->
+<brand-header *ngIf="brandName" [brandName]="brandName"></brand-header>
+
+<div class="text-white">
+  <h2 class="text-center bg-info"> Admin Portal </h2>
+</div>
+
+<div class="row">
+  <div class="col-3">
+    <button class="btn btn-block btn-outline-info" routerLink="/admin/users"
+            routerLinkActive="active">
+      Users
+    </button>
+    <button class="btn btn-block btn-outline-info" routerLink="/admin/roles"
+            routerLinkActive="active">
+      Roles
+    </button>
+  </div>
+
+  <div class="col-9">
+    <router-outlet></router-outlet>
+  </div>
+</div>

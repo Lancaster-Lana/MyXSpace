@@ -1,0 +1,123 @@
+<!--The content below is only a placeholder and can be replaced.-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="">
+  <meta name="author" content="">
+  <title>Consultant</title>
+</head>
+<body>
+  <!-- Brand -header with Logo and Login\Logout -->
+  <brand-header *ngIf="brandName" [brandName]="brandName"></brand-header>
+
+  <div id="page-wrapper" class="row">
+    <!--Left menu -->
+    <aside id="leftBar" class="col-3 shadow ">
+
+      <ul class="nav navbar-nav navbar-fixed-left flex-grow" role="menu">
+        <li class="profile">
+          <figure>
+            <legend *ngIf="user && user.fullName">{{user.fullName}}</legend>
+            <div class="img-circle">
+              <img *ngIf="photo" class="rounded-circle" [src]="photo" alt="user photo" />
+            </div>
+            <!--<footer>{{user.status}} </footer>-->
+          </figure>
+        </li>
+        <li class="candidate-menu">
+          <!--<a [routerLink]="['/consultant/candidates/', { consultantId: consultantId } ]" [class.active]="isActive(['/consultant/candidates'])" class="btn btn-outline-info btn-block"
+             data-toggle="dropdown ">
+            Candidates
+            <badge>{{candidates.Lenght}}</badge>
+          </a>-->
+          <!--<ul id="subMenuDocs" class="dropdown-menu">
+            <li><a href="#divDocuments">Documents</a></li>
+            <li><a href="#divNewMgt">New Mgt</a></li>
+            <li><a href="#newTestemonials">Testemonials</a></li>
+          </ul>-->
+
+          <a #mCandidates name="mCandidates" class="btn btn-outline-info btn-block" data-toggle="dropdown "
+             [routerLink]="['/consultant/candidates/']" (click)="changeMenu(mCandidates)" [class.active]="currentMenu == 'mCandidates'">
+            Candidates <badge *ngIf="(candidates | async)?.length > 0" class="circle-img"> {{(candidates | async)?.length || 0}}</badge>
+          </a>
+          <a #mClients name="mClients" class="btn btn-outline-info btn-block"
+             [routerLink]="['/consultant/clients/']" (click)="changeMenu(mClients)" [class.active]="currentMenu == 'mClients'">
+            Clients <badge *ngIf="(clients | async)?.length > 0" class="circle-img"> {{(clients | async)?.length || 0}} </badge>
+          </a>
+          <a #mContracts name="mContracts" class="btn btn-outline-info btn-block"
+             [routerLink]="['/consultant/contracts/']" (click)="changeMenu(mContracts)" [class.active]="currentMenu == 'mContracts'">
+            Contracts  <badge *ngIf="(contracts | async)?.length > 0" class="circle-img"> {{(contracts | async)?.length || 0}}</badge>
+          </a>
+          <a #mReporting name="mReporting" class="btn btn-outline-info btn-block"
+             [routerLink]="['/consultant/reporting/']" (click)="changeMenu(mReporting)" [class.active]="currentMenu == 'mReporting'">
+            Reporting
+          </a>
+          <a #mFAQPage name="mFAQPage" class="btn btn-outline-info btn-block"
+             [routerLink]="['/consultant/consultantfaq/']" (click)="changeMenu(mFAQPage)" [class.active]="currentMenu == 'mFAQPage'">FAQ</a>
+        </li>
+      </ul>
+
+      <!--<nav class='nav nav-pills nav-stacked '>
+        <div class="navbar-collapse collapse d-sm-inline-flex flex-sm-row-reverse" [ngClass]='{"show": isExpanded}'>
+          <ul class="navbar-nav flex-grow">
+            <li class="">
+              <figure>
+                <legend> Profile Info:</legend>
+                <div class="circle-img img-circle">
+                  <img src="{{agentProfileImage}}" />
+                </div>
+              </figure>
+            </li>
+            <li class="nav-item">
+              <a [routerLink]="['/consultant/candidates']"
+                 class="nav-link text-dark dropdown-toggle"
+                 data-target="#subMenuDocs"
+                 data-toggle="dropdown">
+                Candidates
+              </a>
+              <ul id="subMenuDocs" class="dropdown-menu">
+                <li><a href="#">Documents</a></li>
+                <li><a href="#">New Mgt</a></li>
+                <li><a href="#">Testemonials</a></li>
+              </ul>
+            </li>
+            <li class="nav-item">
+              <a [routerLink]="['/consultant/clients']" class="nav-link text-dark ">
+                Clients
+                <span class="badge">8</span>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a [routerLink]="['/consultant/contracts']" class="nav-link text-dark ">
+                Contracts
+                <span class="badge">77</span>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a [routerLink]="['/consultant/reporting']" class="nav-link text-dark ">
+                Reporting
+              </a>
+            </li>
+            <li class="nav-item">
+              <a href="/Consultant/FAQ" class="nav-link text-dark ">
+                FAQ
+              </a>
+            </li>
+          </ul>
+        </div>
+
+      </nav>-->
+    </aside>
+
+    <!-- PAGE BODY -->
+    <article class="col-9 bg-light">
+      <router-outlet></router-outlet>
+    </article>
+  </div>
+
+</body>
+</html>
+

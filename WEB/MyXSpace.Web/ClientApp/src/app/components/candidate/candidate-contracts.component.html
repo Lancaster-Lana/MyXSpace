@@ -1,0 +1,57 @@
+<!--LIST candidate's contracts -->
+<kendo-grid [kendoGridBinding]="contracts$"
+            height="400"
+            [pageSize]="10"
+            [pageable]="true"
+            [sortable]="true"
+            [filterable]="true"
+            [groupable]="true"
+            [selectable]="{enabled: true, mode: 'multiple'}"
+            [kendoGridSelectBy]="'id'"
+            [selectedKeys]="selectedContractsIDs">
+  <ng-template kendoGridToolbarTemplate>
+    <div class="float-left">
+      <h5><b> My contracts </b></h5>
+    </div>
+    <div class="float-right btn-group-sm">
+      <div class="navbar navbar-inner sidebar" role="navigation">
+        <!-- TODO: modal window-->
+        <a [routerLink]="['/Invite/Friend']" class="btn btn-outline-success"><span>Recommend friend</span></a>
+      </div>
+    </div>
+  </ng-template>
+  <kendo-pager-prev-buttons></kendo-pager-prev-buttons>
+  <kendo-pager-info></kendo-pager-info>
+  <kendo-pager-next-buttons></kendo-pager-next-buttons>
+  <kendo-pager-page-sizes [pageSizes]="[5, 10, 40]"></kendo-pager-page-sizes>
+
+  <!--Columns -->
+  <kendo-grid-checkbox-column showSelectAll="true"></kendo-grid-checkbox-column>
+
+  <kendo-grid-command-column width="40">
+    <ng-template kendoGridCellTemplate let-dataItem>
+      <button class="btn fa fa-download" title="Download Pdf" (click)="downloadPdf(dataItem)"></button>
+    </ng-template>
+  </kendo-grid-command-column>
+  <kendo-grid-command-column width="40">
+    <ng-template kendoGridCellTemplate let-dataItem>
+      <button class="btn fa fa-pen" (click)="signContract(dataItem)" title="Sign Contract">
+        <!--<a [routerLink]="['/Contract/CandidateSignContract']"><i class="fa fa-edit fa-fw"></i>+ Sign contract</a>-->
+      </button>
+    </ng-template>
+  </kendo-grid-command-column>
+
+  <kendo-grid-column field="id" title="ID" width="200"></kendo-grid-column>
+  <kendo-grid-column field="name" title="Name"></kendo-grid-column>
+  <kendo-grid-column field="createdBy" title="created By " width="100"></kendo-grid-column>
+  <!--<kendo-grid-column field="expiresOn" title="Expires On" width="100"> </kendo-grid-column>
+  <kendo-grid-column field="createdOn" title="Created On" width="100"></kendo-grid-column>-->
+  <kendo-grid-column field="fullySigned" title="Fully Signed " width="50"></kendo-grid-column>
+  <kendo-grid-column field="internalUserSigned" title="InternalUserSigned" width="50"></kendo-grid-column>
+  <kendo-grid-column field="internalUserSignOrigin" title="InternalUserSignOrigin" width="200"></kendo-grid-column>
+  <kendo-grid-column field="clientSigned" title="ClientSigned" width="50"></kendo-grid-column>
+  <kendo-grid-column field="clientSignOrigin" title="ClientSignOrigin" width="200"></kendo-grid-column>
+  <kendo-grid-column field="externalUserSigned" title="ExternalUserSigned" width="50"></kendo-grid-column>
+  <kendo-grid-column field="externalUserSignOrigin" title="ExternalUserSignOrigin" width="100"></kendo-grid-column>
+
+</kendo-grid>

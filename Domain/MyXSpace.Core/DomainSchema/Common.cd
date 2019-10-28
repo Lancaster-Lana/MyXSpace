@@ -1,0 +1,157 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="MyXSpace.Core.Entities.Agency">
+    <Position X="5.25" Y="1.25" Width="1.5" />
+    <InheritanceLine Type="MyXSpace.Core.Entities.Entity&lt;TKey&gt;" ManuallyRouted="true">
+      <Path>
+        <Point X="4.75" Y="1.062" />
+        <Point X="4.75" Y="1.167" />
+        <Point X="6" Y="1.167" />
+        <Point X="6" Y="1.25" />
+      </Path>
+    </InheritanceLine>
+    <TypeIdentifier>
+      <HashCode>AAEAAAAABAACAAAAAAAAAAAAAAAAABAgAAEAAAAAAAA=</HashCode>
+      <FileName>Entities\Agency.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="MyXSpace.Core.Entities.Entity&lt;TKey&gt;" Collapsed="true">
+    <Position X="4" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAACEAAAAAAAAAAAAAAAAAAAgAAAAAAAAAAEAAAAAAE=</HashCode>
+      <FileName>Entities\Base\Entity.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="MyXSpace.Core.Entities.Candidate">
+    <Position X="7.25" Y="4.5" Width="1.5" />
+    <InheritanceLine Type="MyXSpace.Core.Entities.Entity&lt;TKey&gt;" ManuallyRouted="true">
+      <Path>
+        <Point X="4.75" Y="1.062" />
+        <Point X="4.75" Y="1.413" />
+        <Point X="5.07" Y="1.413" />
+        <Point X="5.07" Y="2.879" />
+        <Point X="5.191" Y="2.879" />
+        <Point X="5.191" Y="3.932" />
+        <Point X="8" Y="3.932" />
+        <Point X="8" Y="4.5" />
+      </Path>
+    </InheritanceLine>
+    <TypeIdentifier>
+      <HashCode>ACAAAAAEAAAAAAAAAAAAAAAgAAAAAAAAEBAAAAAICAA=</HashCode>
+      <FileName>Entities\Candidate.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="MyXSpace.Core.Entities.Client">
+    <Position X="0.5" Y="0.75" Width="1.5" />
+    <InheritanceLine Type="MyXSpace.Core.Entities.Entity&lt;TKey&gt;" ManuallyRouted="true" FixedToPoint="true">
+      <Path>
+        <Point X="4.75" Y="0.5" />
+        <Point X="4.75" Y="0.125" />
+        <Point X="2.625" Y="0.125" />
+        <Point X="2.625" Y="1.901" />
+        <Point X="2.374" Y="1.901" />
+        <Point X="2.374" Y="2.935" />
+        <Point X="2" Y="2.935" />
+      </Path>
+    </InheritanceLine>
+    <TypeIdentifier>
+      <HashCode>AAEAAAEhAgAAACAeAAAAAAAAAAwAAAABSIFIAABAKQA=</HashCode>
+      <FileName>Entities\Client.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="MyXSpace.Core.Entities.Contract">
+    <Position X="2.75" Y="3" Width="1.5" />
+    <InheritanceLine Type="MyXSpace.Core.Entities.Entity&lt;TKey&gt;" ManuallyRouted="true">
+      <Path>
+        <Point X="4.75" Y="1.062" />
+        <Point X="4.75" Y="1.413" />
+        <Point X="5.07" Y="1.413" />
+        <Point X="5.07" Y="1.546" />
+        <Point X="4.833" Y="1.546" Type="JumpStart" />
+        <Point X="4.667" Y="1.546" Type="JumpEnd" />
+        <Point X="4.388" Y="1.546" />
+        <Point X="4.388" Y="2.52" />
+        <Point X="4.017" Y="2.52" />
+        <Point X="4.017" Y="2.842" />
+        <Point X="3.5" Y="2.842" />
+        <Point X="3.5" Y="3" />
+      </Path>
+    </InheritanceLine>
+    <TypeIdentifier>
+      <HashCode>AAYAEAElBgAkIKkChAAAEEJgAEwRQEABigEYANIAAgw=</HashCode>
+      <FileName>Entities\Contract.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="MyXSpace.Core.Entities.ContractSigned" Collapsed="true">
+    <Position X="2.5" Y="2" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>EodBCwANAWgnNGOQXAulEDxgII4BanAE6ggKCfIQIYE=</HashCode>
+      <FileName>Entities\ContractSigned.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="MyXSpace.Core.Entities.Tenant">
+    <Position X="7.5" Y="0.5" Width="1.5" />
+    <InheritanceLine Type="MyXSpace.Core.Entities.Entity&lt;TKey&gt;" ManuallyRouted="true" FixedToPoint="true">
+      <Path>
+        <Point X="5.156" Y="0.5" />
+        <Point X="5.156" Y="0.125" />
+        <Point X="8.312" Y="0.125" />
+        <Point X="8.312" Y="0.5" />
+      </Path>
+    </InheritanceLine>
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAECAAAAAQEAAAAQQAAAAACABAACAAAAAAAAA=</HashCode>
+      <FileName>Entities\Identity\Tenant.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="MyXSpace.Core.Entities.AppRole">
+    <Position X="11.75" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAIAMCAEAAAgAAAAAAAAAAgAgAAAAAAAAAAkAAAAAAE=</HashCode>
+      <FileName>Entities\Identity\AppRole.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="MyXSpace.Core.Entities.UserProfile">
+    <Position X="5.25" Y="4.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>ACABAEAAACAAAAAAAAAAAAwgAAAAAAAAAAAAAAAACAg=</HashCode>
+      <FileName>Entities\Identity\UserProfile.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="MyXSpace.Core.Entities.AppUser">
+    <Position X="9.5" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAMAIAAAAAAIAAAAEAAAAAgAAAAAgAgAA0AAAYAAE=</HashCode>
+      <FileName>Entities\Identity\AppUser.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="MyXSpace.Core.Entities.UserRole_Permission">
+    <Position X="9.5" Y="4.75" Width="2.25" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAIAAAAgAIAAAAAABAQAAAAAAAAAAAAAABAAAAA=</HashCode>
+      <FileName>Entities\Identity\UserRole_Permission.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="MyXSpace.Core.Entities.UserRole_PermissionGroup">
+    <Position X="12.5" Y="4" Width="2" />
+    <InheritanceLine Type="MyXSpace.Core.Entities.Entity&lt;TKey&gt;" ManuallyRouted="true">
+      <Path>
+        <Point X="4.75" Y="1.062" />
+        <Point X="4.75" Y="3.433" />
+        <Point X="5.108" Y="3.433" Type="JumpStart" />
+        <Point X="5.274" Y="3.433" Type="JumpEnd" />
+        <Point X="12.424" Y="3.433" />
+        <Point X="12.424" Y="4.713" />
+        <Point X="12.5" Y="4.713" />
+      </Path>
+    </InheritanceLine>
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAgAAAAAAAAAAQAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Entities\Identity\UserRole_PermissionGroup.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>

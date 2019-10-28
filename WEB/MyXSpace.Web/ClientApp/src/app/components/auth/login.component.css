@@ -1,0 +1,34 @@
+.body {
+ margin:0px;
+}
+
+.login-page {
+  background-image: url('../../assets/images/img-login-8.jpg');
+  background-size:cover;
+}
+
+.input-icon {
+  position: absolute;
+  left: 3px;
+  top: calc(50% - 0.5em); /* Keep icon in center of input, regardless of the input height */
+}
+
+input {
+  padding-left: 17px;
+}
+
+.input-wrapper {
+  position: relative;
+}
+@media (min-width: 768px) {
+    .login-container {
+        margin:20px;
+        vertical-align:central;
+    }
+}
+
+@media (min-width: 1200px) {
+  .login-container {
+    vertical-align: central;
+  }
+}

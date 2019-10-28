@@ -1,0 +1,20 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp2.2</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Remove="Entities\Alert.cs" />
+    <Compile Remove="Entities\Ape.cs" />
+    <Compile Remove="Entities\ChangeLog.cs" />
+    <Compile Remove="Logging\FileLogger.cs" />
+    <Compile Remove="Logging\FileLoggerExtensions.cs" />
+    <Compile Remove="Logging\FileLoggerProvider.cs" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.AspNetCore.All" Version="2.2.0" />
+  </ItemGroup>
+
+</Project>

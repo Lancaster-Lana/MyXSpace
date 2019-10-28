@@ -1,0 +1,26 @@
+<!--<div *ngIf="isUserLoggedIn; else loginPage">-->
+  <div class="{{configurations.theme | lowercase}}-theme7 container-fluid">
+
+    <div class="container-fluid">
+      <router-outlet></router-outlet>
+    </div>
+    <!--<div id="pre-bootstrap" *ngIf="!removePrebootScreen" [class.prebootShow.app-component]="!isAppLoaded"
+         class="app-component prebootStep">
+      <div class="messaging">
+        <h2> Loaded! </h2>
+      </div>
+    </div>-->
+    <!-- footer-->
+    <footer class="footer">
+      <nav class="fixed-bottom shadow">
+        <p class="text-center">
+          <b>My<em>XSpace</em></b> - <small>Multi-branding recruting environment &copy; {{getYear()}}</small>
+        </p>
+      </nav>
+    </footer>
+  </div>
+<!--</div>-->
+
+<ng-template #loginPage >
+  <app-login></app-login>
+</ng-template>

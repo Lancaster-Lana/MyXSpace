@@ -1,0 +1,17 @@
+﻿<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp2.2</TargetFramework>
+    <AspNetCoreHostingModel>InProcess</AspNetCoreHostingModel>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.AspNetCore.All" Version="2.2.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\..\Domain\MyXSpace.Core.DomainServices\MyXSpace.Core.Services.csproj" />
+    <ProjectReference Include="..\..\Domain\MyXSpace.Core\MyXSpace.Core.csproj" />
+    <ProjectReference Include="..\MyXSpace.EF\MyXSpace.EF.csproj" />
+  </ItemGroup>
+</Project>

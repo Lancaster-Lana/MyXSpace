@@ -1,0 +1,55 @@
+<!--LIST candidates's job offers -->
+<h3>My Job Offers</h3>
+
+<nav class="navbar" role="tab">
+  <ul class="nav nav-tabs nav-tabs-line">
+    <li class="nav-item">
+      <!--<a [routerLink]="['/candidate/{{candidateID}}/joboffers/accepted']" class="nav-link" href="#accepted" role="tab" data-toggle="tab">New Offers</a>-->
+      <a class="nav-link" href="#new" role="tab" data-toggle="tab">New Offers</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" href="#accepted" role="tab" data-toggle="tab">Accepted</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" href="#applied" role="tab" data-toggle="tab">Applied</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" href="#confirmed" role="tab" data-toggle="tab">Confirmed</a>
+    </li>
+    <!--<li class="nav-item">
+      <a href="#rejected" role="tab" data-toggle="tab">Rejected</a>
+    </li>-->
+  </ul>
+</nav>
+
+<div *ngIf="jobOffers$" class="scrollable-content">
+
+  <!--<div #new *ngFor="let offer of jobOffers$ | async">
+    <ng-container *ngTemplateOutlet="offerTemplate; context: { $implicit: offer }"></ng-container>
+  </div>
+
+  <div #accepted *ngFor="let offer of acceptedOffers$">
+    <ng-container *ngTemplateOutlet="offerTemplate; context: { $implicit: offer }"> </ng-container>
+  </div>
+
+  <div #applied *ngFor="let offer of appliedOffers$">
+    <ng-container *ngTemplateOutlet="offerTemplate; context: { $implicit: offer }"> </ng-container>
+  </div>-->
+</div>
+
+<!--<ng-template #offerTemplate let-jobTitle="jobTitle" let-jobDetails="jobDetails">-->
+  <ng-template #offerTemplate let-offer>
+    <article class="card border">
+      <div class="panel panel-primary">
+        <label class="offer-title">
+         <span class="float-left"> {{offer.jobTitle}}</span>
+         <button class="btn-info float-right recomment-friend">Recommend someone</button>
+        </label>
+        <div class="offer-details">{{offer.jobDetails}}</div>
+        <div class="panel-footer btn-group">
+          <button class="btn-danger" (click)="reject(offer)"> Not interested</button>
+          <button class="btn-success" (click)="apply(offer)"> Apply</button>
+        </div>
+      </div>
+    </article>
+  </ng-template>

@@ -1,0 +1,59 @@
+<h4> Job Offers </h4>
+
+<!--TODO: filtered list of offers made by Client-->
+<p>
+  <a href="/Client/MakeOffer">Create New</a>
+</p>
+
+<nav class="navbar navbar-static-top" role="menu">
+  <div class="container-fluid">
+    <div class="float-left">
+      <h5><b> My job offers </b></h5>
+    </div>
+    <div class="float-right">
+      <button (click)="makeJobOffer()" class="btn btn-outline-success">
+        <i class="fa fa-pen"></i> Make Job Offer
+      </button>
+      <button (click)="makeJobOffer()" class="btn btn-outline-success">
+        <i class="fa fa-trash"></i> Delete\Trash Job Offers
+      </button>
+    </div>
+  </div>
+</nav>
+
+<!--LIST client's job offers -->
+<kendo-grid [kendoGridBinding]="jobOffers$"
+            height="400"
+            [pageSize]="10"
+            [pageable]="true"
+            [sortable]="true"
+            [filterable]="true"
+            [groupable]="true"
+            [selectable]="{enabled: true, mode: 'multiple'}"
+            [kendoGridSelectBy]="'id'"
+            [selectedKeys]="selectedJobOffersIDs">
+  <ng-template kendoGridToolbarTemplate>
+    <div class="float-left">
+      <button kendoGridExcelCommand icon="file-new" class="btn btn-sm btn-success" (click)="newJobOffer()" > New JobOffer</button>
+      <!--<button kendoGridExcelCommand icon="file-pdf" class="btn btn-sm btn-success"> Save to pdf</button>-->
+    </div>
+    <div class="float-right btn-group-sm">
+    </div>
+  </ng-template>
+  <kendo-pager-prev-buttons></kendo-pager-prev-buttons>
+  <kendo-pager-info></kendo-pager-info>
+  <kendo-pager-next-buttons></kendo-pager-next-buttons>
+  <kendo-pager-page-sizes [pageSizes]="[5, 10, 40]"></kendo-pager-page-sizes>
+
+  <!--Columns -->
+  <kendo-grid-checkbox-column showSelectAll="true"></kendo-grid-checkbox-column>
+  <kendo-grid-column field="id" title="ID" width="200"></kendo-grid-column>
+  <kendo-grid-column field="name" title="Name"></kendo-grid-column>
+  <kendo-grid-column field="title" title="Title"></kendo-grid-column>
+  <kendo-grid-column field="description" title="Description"></kendo-grid-column>
+  <kendo-grid-column field="createdOn" title="Created On" width="100"></kendo-grid-column>
+  <kendo-grid-column field="expiresOn" title="Expires On" width="100"> </kendo-grid-column>
+  <kendo-grid-column field="status" title="New\Accepted\Rejected " width="50"></kendo-grid-column>
+
+
+</kendo-grid>

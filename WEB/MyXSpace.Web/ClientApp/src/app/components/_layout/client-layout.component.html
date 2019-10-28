@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="">
+  <meta Client="author" content="">
+  <title>Candidate</title>
+</head>
+<body>
+  <!-- Header with brand Logo and Login\Logout -->
+  <brand-header *ngIf="brandName" [brandName]="brandName"></brand-header>
+
+  <div id="wrapper">
+
+    <!-- Main content -->
+    <div class="row">
+      <!--Left menu -->
+      <aside id="leftBar" class="col-3 shadow border bg-light">
+        <ul class="navbar-nav flex-grow">
+          <li class="profile">
+            <figure>
+              <legend *ngIf="user && user.fullName">{{user.fullName}}</legend>
+              <div class="img-circle">
+                <img *ngIf="photo" class="rounded-circle" [src]="photo" alt="user photo" />
+              </div>
+              <!--<footer>{{user.status}} </footer>-->
+            </figure>
+          </li>
+          <li>
+            <div class="m-1">
+              <a [routerLink]="['/client/jobOffers/']" class="btn btn-outline-info btn-block">Job Offers  </a>
+              <a [routerLink]="['/client/invoices/']" class="btn btn-outline-info btn-block "> Invoices </a>
+              <a [routerLink]="['/client/contracts/']" class="btn btn-outline-info btn-block"> Contracts </a>
+              <a [routerLink]="['/client/documents/']" class="btn btn-outline-info btn-block"> Documents </a>
+            </div>
+          </li>
+        </ul>
+      </aside>
+
+      <!-- PAGE BODY -->
+      <main class="col-8">
+
+        <!-- main page MenuBar -->
+        <!--<nav class="navbar navbar-default navbar-static-top" role="navigation">
+          <div class="navbar-header"></div>
+
+          <div class="navbar-default sidebar" role="navigation">
+            <div class="sidebar-nav">
+              <ul class="nav nav-pills">
+                <li>
+                  <a [routerLink]="['/Contract/ClientSign']">
+                    <i class="fa fa-edit"></i>+ Sign contract
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </nav>-->
+        <!-- Page content-->
+        <main>
+          <router-outlet></router-outlet>
+        </main>
+      </main>
+    </div>
+  </div>
+
+</body>
+</html>

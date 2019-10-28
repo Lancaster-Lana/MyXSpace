@@ -1,0 +1,72 @@
+
+<div class="form-horizontal">
+  <div class="form-group">
+    <label for="language" class="col-3 control-label">{{'preferences.Language' | translate}} </label>
+    <div class="col-4">
+      <select id="language" [(ngModel)]="configurations.language" #languageSelector class="form-control">
+        <option data-subtext="(Default)" value="en">{{'preferences.English' | translate}}</option>
+        <option value="fr">{{'preferences.French' | translate}}</option>
+        <option value="de">{{'preferences.German' | translate}}</option>
+      </select>
+    </div>
+    <div class="col-5">
+      <p class="form-control-static text-muted small">{{'preferences.LanguageHint' | translate}}</p>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-md-12">
+      <hr class="subseparator-hr" />
+    </div>
+  </div>
+  <div class="form-group">
+    <label class="col-3 control-label" for="dashboardBanner">{{'preferences.DashboardBanner' | translate}}</label>
+    <div class="col-4">
+      <input type="checkbox" checked data-toggle="toggle" data-size="sm"
+             class="form-control" name="dashboardBanner" [(ngModel)]="configurations.showDashboardBanner" />
+    </div>
+    <div class="col-sm-5">
+      <p class="form-control-static text-muted small">{{'preferences.DashboardBannerHint' | translate}}</p>
+    </div>
+
+
+    <!--<div class="row">
+    <div class="col-md-12">
+      <hr class="last-separator-hr" />
+    </div>
+  </div>
+  <div class="form-group">
+    <div class="col-3">
+    </div>
+    <div class="col-9">
+      <div class="row pull-left">
+        <div class="col-sm-6 col-reset-default">
+          <button type="button" (click)="resetDefault()" class="btn btn-success">
+            <i class='fa fa-circle-o-notch'></i> {{'preferences.ResetDefault' | translate}}
+          </button>
+        </div>
+        <div class="col-sm-6 col-set-default">
+          <button type="button" (click)="setAsDefault()" class="btn btn-primary">
+            <i class='fa fa-hdd-o'></i> {{'preferences.SetDefault' | translate}}
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>-->
+    <!--<div class="form-group">
+    <label for="refreshButton" class="col-sm-3 control-label">{{'preferences.ReloadPreferences' | translate}} </label>
+    <div class="col-sm-4">
+      <button id="refreshButton" class="btn btn-default" (click)="reloadFromServer()">
+        <i class="fa fa-refresh"></i>
+      </button>
+    </div>
+    <div class="col-sm-5">
+      <p class="form-control-static text-muted small">{{'preferences.ReloadPreferencesHint' | translate}}</p>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-md-12">
+      <hr class="separator-hr" />
+    </div>
+  </div>-->
+  </div>
+</div>

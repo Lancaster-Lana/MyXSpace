@@ -1,0 +1,11 @@
+﻿
+FROM: jobs@myadsearch.fr Title: [Adsearch]:TODO
+Welcome to %company% 
+Dear %First_Name%, You have registered successfully to %company%,
+WELCOME ! We hope our platform will provide you great value all along your job search period and beyond.
+To access your personal environment: https://my%company%.fr
+
+Login: Your email Password: The one you defined during the registration process.
+We thanks you for your trust.
+
+Kind Regards, %Consultant_FirstName% %Consultant_LastName% - %company%

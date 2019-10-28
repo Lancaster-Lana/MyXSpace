@@ -1,0 +1,29 @@
+﻿<Project Sdk="Microsoft.NET.Sdk.Web">
+
+    <PropertyGroup>
+      <Description>Business logic services</Description>
+      <TargetFramework>netcoreapp2.2</TargetFramework>
+      <GenerateDocumentationFile>true</GenerateDocumentationFile>
+      <ApplicationIcon />
+      <OutputType>Library</OutputType>
+      <StartupObject />
+    </PropertyGroup>
+
+    <ItemGroup>
+      <ProjectReference Include="..\MyXSpace.Core\MyXSpace.Core.csproj" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <Folder Include="Business\Agency\Commands\" />
+      <Folder Include="Business\Candidate\Commands\" />
+      <Folder Include="Business\Client\Commands\" />
+      <Folder Include="Business\Contract\Commands\" />
+      <Folder Include="Tech\NotificationService\" />
+      <Folder Include="Business\User\" />
+      <Folder Include="Business\Role\" />
+      <Folder Include="Business\UserProfile\Commands\" />
+      <Folder Include="Tech\Log\" />
+      <Folder Include="Tech\Localization\" />
+    </ItemGroup>
+
+</Project>
